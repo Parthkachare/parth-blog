@@ -3,11 +3,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <url>
-    <loc>https://yourblog.vercel.app/</loc>
+    <loc>https://parth-blog.vercel.app/</loc>
   </url>
 
   <url>
-    <loc>https://yourblog.vercel.app/blog</loc>
+    <loc>https://parth-blog.vercel.app/blog</loc>
   </url>
 
 </urlset>
