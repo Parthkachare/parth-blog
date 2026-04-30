@@ -282,8 +282,202 @@ By mastering features like Auto Layout, Components, Variants, Constraints, Style
 
 The more comfortable you become with these features, the faster and more effective your design process will be.
 `,
+},
+{
+  id: "5",
+  title: "Top 10 UI/UX Design Trends in 2026",
+  excerpt:
+    "Explore the latest UI/UX trends shaping modern digital products, from minimal design to AI-driven experiences.",
+  image:
+    "https://images.unsplash.com/photo-1559028012-481c04fa702d",
+  category: "UI/UX",
+  date: "Apr 1, 2026",
+  readTime: "7 min read",
+  author: "Parth Kachare",
+  featured: false,
+  content: `
+## Introduction
+
+UI/UX design is constantly evolving. In 2026, the focus is on simplicity, personalization, and immersive user experiences.
+
+## 1. Minimalistic Design
+
+Clean layouts with less clutter improve usability and focus.
+
+## 2. Dark Mode
+
+Dark mode enhances readability and reduces eye strain.
+
+## 3. AI Personalization
+
+Apps now adapt content based on user behavior.
+
+## 4. Micro-Interactions
+
+Small animations improve engagement and feedback.
+
+## 5. Motion UI
+
+Smooth transitions make apps feel modern.
+
+## Conclusion
+
+UI/UX trends are moving toward smarter, cleaner, and more user-focused design.
+`,
+},
+
+{
+  id: "6",
+  title: "Beginner Guide to UI/UX Design",
+  excerpt:
+    "A complete beginner-friendly guide to understanding UI/UX design and how to start your journey.",
+  image:
+    "https://images.unsplash.com/photo-1558655146-d09347e92766",
+  category: "UI/UX",
+  date: "Apr 2, 2026",
+  readTime: "6 min read",
+  author: "Parth Kachare",
+  featured: false,
+  content: `
+## Introduction
+
+UI/UX design is one of the most in-demand skills today.
+
+## What is UI?
+
+UI stands for User Interface. It includes visual elements like buttons, colors, and layouts.
+
+## What is UX?
+
+UX stands for User Experience. It focuses on how users interact with a product.
+
+## Tools to Learn
+
+Figma  
+Canva  
+Adobe XD  
+
+## Conclusion
+
+UI/UX combines creativity and problem-solving to build better digital experiences.
+`,
+},
+
+{
+  id: "7",
+  title: "Figma vs Canva: Which Tool Should You Choose?",
+  excerpt:
+    "Compare Figma and Canva to understand which design tool suits your needs better.",
+  image:
+    "https://images.unsplash.com/photo-1626785774573-4b799315345d",
+  category: "Design",
+  date: "Apr 3, 2026",
+  readTime: "5 min read",
+  author: "Parth Kachare",
+  featured: false,
+  content: `
+## Introduction
+
+Figma and Canva are popular design tools but serve different purposes.
+
+## Figma
+
+Best for UI/UX design  
+Real-time collaboration  
+Professional workflows  
+
+## Canva
+
+Easy to use  
+Best for quick graphics  
+Great for beginners  
+
+## Conclusion
+
+Choose Figma for professional design and Canva for quick, simple work.
+`,
+},
+
+{
+  id: "8",
+  title: "How I Built My Portfolio Website Using Vite and React",
+  excerpt:
+    "A step-by-step breakdown of how I designed and developed my personal portfolio website.",
+  image:
+    "https://images.unsplash.com/photo-1518779578993-ec3579fee39f",
+  category: "Web Development",
+  date: "Apr 4, 2026",
+  readTime: "6 min read",
+  author: "Parth Kachare",
+  featured: false,
+  content: `
+## Introduction
+
+Building a portfolio is essential for showcasing your skills.
+
+## Step 1: Planning
+
+Define layout, sections, and user flow.
+
+## Step 2: Design
+
+Use Figma to create UI designs.
+
+## Step 3: Development
+
+Use React and Vite for fast performance.
+
+## Step 4: Deployment
+
+Deploy using Vercel.
+
+## Conclusion
+
+A well-designed portfolio helps you stand out.
+`,
+},
+
+{
+  id: "9",
+  title: "Common UI Design Mistakes Beginners Should Avoid",
+  excerpt:
+    "Learn the most common UI design mistakes and how to avoid them to create better user experiences.",
+  image:
+    "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+  category: "UI/UX",
+  date: "Apr 5, 2026",
+  readTime: "6 min read",
+  author: "Parth Kachare",
+  featured: false,
+  content: `
+## Introduction
+
+Many beginners make mistakes that affect usability.
+
+## Too Many Colors
+
+Using too many colors creates confusion.
+
+## Poor Typography
+
+Unreadable fonts reduce user experience.
+
+## No Consistency
+
+Maintain consistent design across pages.
+
+## Not Mobile Friendly
+
+Always design for mobile-first experience.
+
+## Conclusion
+
+Avoiding these mistakes improves your design quality.
+`,
 }
+
 ];
+
 
 
 
