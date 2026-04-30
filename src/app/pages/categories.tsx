@@ -3,7 +3,9 @@ import { Code, Palette, Brain, Rocket, BookOpen } from "lucide-react";
 import { motion } from "motion/react";
 import { Badge } from "../components/ui/badge";
 import { BlogCard } from "../components/blog-card";
-import { Link } from "react-router";
+import { Link, useParams } from "react-router";
+const params = new URLSearchParams(window.location.search);
+const selectedCategory = params.get("category");
 
 // Categories page component
 const categories = [
@@ -74,46 +76,50 @@ export default function Categories() {
       <section className="max-w-7xl mx-auto px-6 mb-16">
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
           {categories.map((category, index) => {
-            const Icon = category.icon;
-            return (
-              <motion.div
-                key={category.name}
-                className="group bg-card border border-border rounded-2xl p-8 hover:border-[#FF7A00]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#FF7A00]/10 cursor-pointer"
-                initial={{ opacity: 0, y: 50 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
-                whileHover={{ scale: 1.05, y: -5 }}
-                whileTap={{ scale: 0.98 }}
-              >
-                <motion.div
-                  className="w-14 h-14 rounded-xl flex items-center justify-center mb-4"
-                  style={{ backgroundColor: `${category.color}20` }}
-                  whileHover={{ rotate: 360, scale: 1.1 }}
-                  transition={{ duration: 0.6 }}
-                >
-                  <Icon className="w-7 h-7" style={{ color: category.color }} />
-                </motion.div>
-                <h3 className="text-2xl font-bold mb-2 group-hover:text-[#FF7A00] transition-colors">
-                  {category.name}
-                </h3>
-                <p className="text-muted-foreground text-sm mb-4">
-                  {category.description}
-                </p>
-                <Badge className="bg-muted text-foreground hover:bg-muted">
-                  {category.count} articles
-                </Badge>
-              </motion.div>
-            );
-          })}
+  const Icon = category.icon;
+  return (
+    <Link key={category.name} to={`/blog?category=${category.name}`}>
+      <motion.div
+        className="group bg-card border border-border rounded-2xl p-8 hover:border-[#FF7A00]/50 transition-all duration-300 hover:shadow-xl hover:shadow-[#FF7A00]/10 cursor-pointer"
+        initial={{ opacity: 0, y: 50 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: index * 0.1 }}
+        whileHover={{ scale: 1.05, y: -5 }}
+        whileTap={{ scale: 0.98 }}
+      >
+        <motion.div
+          className="w-14 h-14 rounded-xl flex items-center justify-center mb-4"
+          style={{ backgroundColor: `${category.color}20` }}
+          whileHover={{ rotate: 360, scale: 1.1 }}
+          transition={{ duration: 0.6 }}
+        >
+          <Icon className="w-7 h-7" style={{ color: category.color }} />
+        </motion.div>
+
+        <h3 className="text-2xl font-bold mb-2 group-hover:text-[#FF7A00] transition-colors">
+          {category.name}
+        </h3>
+
+        <p className="text-muted-foreground text-sm mb-4">
+          {category.description}
+        </p>
+
+        <Badge className="bg-muted text-foreground hover:bg-muted">
+          {category.count} articles
+        </Badge>
+      </motion.div>
+    </Link>
+  );
+})}
         </div>
 
         {/* Popular Posts from Each Category */}
         <div className="space-y-12">
           {categories.slice(0, 3).map((category, categoryIndex) => {
-            const categoryPosts = blogPosts
-              .filter((post) => post.category === category.name)
-              .slice(0, 3);
+            const categoryPosts = selectedCategory
+  ? blogPosts.filter((post) => post.category === selectedCategory)
+  : blogPosts.filter((post) => post.category === category.name).slice(0, 3);
 
             if (categoryPosts.length === 0) return null;
 
@@ -142,7 +148,9 @@ export default function Categories() {
                       viewport={{ once: true }}
                       transition={{ delay: postIndex * 0.1 }}
                     >
+                      <Link to={`/article/${post.id}`}>
                       <BlogCard {...post} />
+                      </Link>
                     </motion.div>
                   ))}
                 </div>

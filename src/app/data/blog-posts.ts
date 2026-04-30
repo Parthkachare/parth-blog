@@ -1,6 +1,7 @@
 /* blog-posts.ts */
 
 export interface BlogPost {
+  featured: any;
   id: string;
   title: string;
   excerpt: string;
@@ -14,17 +15,18 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    id: "1",
-    title: "Building Modern React Applications with TypeScript",
-    excerpt:
-      "Learn how to leverage TypeScript to build scalable and maintainable React applications with best practices.",
-    image:
-      "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
-    category: "React",
-    date: "Mar 12, 2026",
-    readTime: "8 min read",
-    author: "Parth Kachare",
-    content: `
+id: "1",
+  title: "Building Modern React Applications with TypeScript",
+  excerpt:
+    "Learn how to leverage TypeScript to build scalable and maintainable React applications with best practices.",
+  image:
+    "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+  category: "React",
+  date: "Mar 12, 2026",
+  readTime: "8 min read",
+  author: "Parth Kachare",
+  featured: true, 
+  content: `
 ## Introduction
 
 React with TypeScript provides powerful developer experience and safer code.
@@ -57,6 +59,7 @@ Using TypeScript with React significantly improves scalability and maintainabili
     date: "Mar 14, 2026",
     readTime: "6 min read",
     author: "Parth Kachare",
+    featured: true,
     content: `
 ## Introduction
 
@@ -91,6 +94,7 @@ Interactive design helps your portfolio stand out.
     date: "Mar 15, 2026",
     readTime: "5 min read",
     author: "Parth Kachare",
+    featured: true,
     content: `
 ## Introduction
 
@@ -123,10 +127,11 @@ Small interactive projects improve coding skills.
     "Discover 10 powerful Figma tips that help UI designers work faster, build better design systems, and create scalable interfaces.",
   image:
     "https://images.unsplash.com/photo-1626785774573-4b799315345d",
-  category: "UI/UX Design",
+  category: "UI/UX",
   date: "Mar 16, 2026",
   readTime: "10 min read",
   author: "Parth Kachare",
+  featured: true,
   content: `
 ## Introduction
 

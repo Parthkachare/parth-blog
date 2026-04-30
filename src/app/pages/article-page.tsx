@@ -4,6 +4,7 @@ import { BlogCard } from "../components/blog-card";
 import { Badge } from "../components/ui/badge";
 import { Button } from "../components/ui/button";
 
+
 import {
   Calendar,
   Clock,
@@ -19,7 +20,9 @@ import { useState } from "react";
 
 export default function ArticlePage() {
   const { id } = useParams();
-  const article = blogPosts.find((post) => post.id === id);
+  const article = blogPosts.find((post) => String(post.id) === String(id));
+  console.log("ID FROM URL:", id);
+  console.log("ALL POSTS:", blogPosts);
 
   const [copiedLink, setCopiedLink] = useState(false);
 

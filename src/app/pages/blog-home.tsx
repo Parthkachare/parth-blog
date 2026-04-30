@@ -8,11 +8,21 @@ import { BlogSidebar } from "../components/blog-sidebar";
 import { Badge } from "../components/ui/badge";
 import { Input } from "../components/ui/input";
 
+
 const categories = ["React", "UI/UX", "AI", "Startups", "Tutorials"];
 
+
 export default function BlogHome() {
-  const featuredPost = blogPosts.find((post) => post.featured);
-  const latestPosts = blogPosts.filter((post) => !post.featured).slice(0, 8);
+  const params = new URLSearchParams(window.location.search);
+  const selectedCategory = params.get("category");
+  const filteredPosts = selectedCategory
+    ? blogPosts.filter((post) => post.category === selectedCategory)
+    : blogPosts;
+    const featuredPost = filteredPosts.find((post) => post.featured);
+  const latestPosts = filteredPosts
+    .filter((post) => !post.featured)
+    .slice(0, 8);
+  
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
 
   useEffect(() => {
@@ -106,11 +116,13 @@ export default function BlogHome() {
               whileHover={{ scale: 1.1, y: -5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Badge
-                className="px-4 py-2 cursor-pointer bg-card border border-border text-foreground hover:bg-[#FF7A00] hover:text-white hover:border-[#FF7A00] transition-all"
-              >
-                {category}
-              </Badge>
+<a href={`/blog?category=${category}`}>
+  <Badge
+    className="px-4 py-2 cursor-pointer bg-card border border-border text-foreground hover:bg-[#FF7A00] hover:text-white hover:border-[#FF7A00] transition-all"
+  >
+    {category}
+  </Badge>
+</a>
             </motion.div>
           ))}
         </motion.div>
